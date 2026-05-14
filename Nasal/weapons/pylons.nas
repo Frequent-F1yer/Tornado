@@ -100,9 +100,9 @@ else {
     pylon1set = [pylonSets.empty, pylonSets.boz10x];
     pylon2set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
     pylon3set = [pylonSets.empty, pylonSets.a88];
-    pylon4set = [pylonSets.empty, pylonSets.a88];
+    pylon4set = [pylonSets.empty, pylonSets.a88, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84];
     pylon5set = [pylonSets.empty];
-    pylon6set = [pylonSets.empty, pylonSets.a88];
+    pylon6set = [pylonSets.empty, pylonSets.a88, pylonSets.m82_2, pylonSets.m82air_2, pylonSets.m83, pylonSets.m84];
     pylon7set = [pylonSets.empty, pylonSets.a88];
     pylon8set = [pylonSets.empty, pylonSets.aim9l, pylonSets.aim9l_2];
     pylon9set = [pylonSets.empty, pylonSets.boz10x];

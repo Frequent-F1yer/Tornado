@@ -15,7 +15,8 @@ var PageEnum = {
 	PAGE_FD: 1,
 	PAGE_GUN: 3,
 	PAGE_SENSOR: 2,
-	NUM_PAGES: 4
+    PAGE_CCIP: 4,
+	NUM_PAGES: 5
 };
 
 var HUD = {
@@ -33,6 +34,7 @@ var HUD = {
 		m.Pages[PageEnum.PAGE_EMPTY] = hud_empty.new(m.GroupHud.createChild('group'), instance);
 		m.Pages[PageEnum.PAGE_FD] = hud_fd.new(m.GroupHud.createChild('group'), instance);
 		m.Pages[PageEnum.PAGE_SENSOR] = hud_sensor.new(m.GroupHud.createChild('group'), instance);
+        m.Pages[PageEnum.PAGE_CCIP] = hud_ccip.new(m.GroupHud.createChild('group'), instance);
 		m.Pages[PageEnum.PAGE_GUN] = hud_gun.new(m.GroupHud.createChild('group'), instance);
 
 		m.swMode = props.globals.getNode("instrumentation/hud/swMode");
@@ -74,6 +76,12 @@ var HUD = {
 				if(me.SelectedWeapon != nil) { #and me.input.MasterArm.getValue()
 					if(me.SelectedWeapon.type == "AGM-88") {
 						me.NewPage = PageEnum.PAGE_SENSOR;
+					}
+                    else if( me.SelectedWeapon.type == "MK-82" or
+						me.SelectedWeapon.type == "MK-82AIR" or
+						me.SelectedWeapon.type == "MK-83" or
+						me.SelectedWeapon.type == "MK-84") {
+						me.NewPage = PageEnum.PAGE_CCIP;
 					}
 					else {
 						me.NewPage = PageEnum.PAGE_GUN;
